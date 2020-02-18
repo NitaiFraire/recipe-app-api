@@ -21,7 +21,7 @@ class BaseRecipeAttrViewSet(viewsets.GenericViewSet,
     def perform_create(self, serializer):
         """Create a new object"""
         serializer.save(user=self.request.user)
-    
+
 
 class TagViewSet(BaseRecipeAttrViewSet):
     """Manage tags in the database"""
